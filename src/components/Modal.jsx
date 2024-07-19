@@ -1,29 +1,25 @@
 import React from "react";
 import useModalStore from "../store/modal";
-import MonotoneButton from "./buttons/MonotoneButton";
-import PrimaryButton from "./buttons/PrimaryButton";
+import DayModal from "./modalcontent/DayModal";
+import CategoryModal from "./modalcontent/CategoryModal";
 
-const Modal = () => {
-  const { isOpen, closeModal } = useModalStore();
+function Modal() {
+  const { isOpen, content } = useModalStore();
 
   return (
     <>
       {isOpen && (
         <div className="fixed flex justify-center items-center w-full h-screen bg-modalBg">
           <div className="min-w-80 p-6 bg-white rounded-lg">
-            <p className="text-grey00 text-2xl font-bold">등록</p>
             <div>
-              <p>Modal Content</p>
-            </div>
-            <div className="flex justify-end gap-2">
-              <MonotoneButton label="취소" onClick={closeModal} />
-              <PrimaryButton label="확인" onClick={closeModal} />
+              {content === "day" && <DayModal />}
+              {content === "category" && <CategoryModal />}
             </div>
           </div>
         </div>
       )}
     </>
   );
-};
+}
 
 export default Modal;
