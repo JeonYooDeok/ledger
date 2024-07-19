@@ -1,7 +1,10 @@
 import React from "react";
 import PrimaryButton from "../components/buttons/PrimaryButton";
+import useModalStore from "../store/modal";
 
 function Day() {
+  const { openModal } = useModalStore();
+
   return (
     <div className="p-4 flex-1">
       <div className="bg-white rounded-lg">
@@ -9,7 +12,7 @@ function Day() {
           <span className="text-3xl text-grey00 font-bold leading-10">
             일별
           </span>
-          <PrimaryButton className="h-10" label="등록" />
+          <PrimaryButton className="h-10" label="등록" onClick={openModal} />
         </div>
         <div className="flex bg-tableHeaderBg border-b border-divider">
           <div className="flex flex-1 justify-center p-2 text-grey00 text-sm font-bold">
