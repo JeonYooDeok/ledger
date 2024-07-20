@@ -14,7 +14,7 @@ export default {
         bg00: "#EFEFF2",
         bg01: "#FFFFFF",
         bg02: "#F7F7F7",
-        modalBg: "#rgba(0, 0, 0, 0.7)",
+        modalBg: "rgba(0, 0, 0, 0.7)",
         headerBg: "#23262B",
         tableHeaderBg: "#f4f4f4",
         success: "#01C0AE",
