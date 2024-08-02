@@ -5,6 +5,7 @@ import App from "./App.jsx";
 import "./index.css";
 import Login from "./pages/Login.jsx";
 import SignUp from "./pages/SingUp.jsx";
+import SingUpComplete from "./pages/SingUpComplete.jsx";
 import Day from "./pages/Day.jsx";
 import Calendar from "./pages/Calendar.jsx";
 import CategorySetting from "./pages/CategorySetting.jsx";
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
       {
         path: "/signup",
         element: <SignUp />,
+      },
+      {
+        path: "/signupcomplete",
+        element: <SingUpComplete />,
       },
       {
         path: "/day",
