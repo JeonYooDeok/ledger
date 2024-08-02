@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import PrimaryButton from "../components/buttons/PrimaryButton";
 import TextBox from "../components/form/TextBox";
+import logo from "../imgs/logo.png";
 import google from "../imgs/google.png";
 import naver from "../imgs/naver.png";
 import kakao from "../imgs/kakao.png";
@@ -166,7 +167,9 @@ function Login() {
   return (
     <div className="flex flex-col justify-center h-screen bg-bg00">
       <div className="w-[440px] bg-white shadow-lg rounded-lg overflow-hidden">
-        <div className="bg-headerBg px-6 py-4 text-white">로고</div>
+        <div className="bg-headerBg px-6 py-6 text-white">
+          <img src={logo} alt="로고" className="h-10" />
+        </div>
         <div className="p-8">
           <div className="flex flex-col gap-4">
             <p className="text-grey00 text-xl font-bold">로그인</p>
@@ -216,13 +219,13 @@ function Login() {
             </div>
             <div className="flex gap-4 justify-center">
               <Link to="" className="inline-flex">
+                <img src={naver} alt="네이버로그인" className="w-12" />
+              </Link>
+              <Link to="" className="inline-flex">
+                <img src={kakao} alt="카카오로그인" className="w-12" />
+              </Link>
+              <Link to="" className="inline-flex">
                 <img src={google} alt="구글로그인" className="w-12" />
-              </Link>
-              <Link to="" className="inline-flex">
-                <img src={naver} alt="구글로그인" className="w-12" />
-              </Link>
-              <Link to="" className="inline-flex">
-                <img src={kakao} alt="구글로그인" className="w-12" />
               </Link>
             </div>
           </div>

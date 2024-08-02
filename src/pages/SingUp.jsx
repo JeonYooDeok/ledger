@@ -5,6 +5,7 @@ import PrimaryButton from "../components/buttons/PrimaryButton";
 import MonotoneButton from "../components/buttons/MonotoneButton";
 import SecondaryButton from "../components/buttons/SecondaryButton";
 import useGoBack from "../hooks/useGoBack";
+import logo from "../imgs/logo.png";
 
 function SignUp() {
   // 이전 페이지로 돌아가기 훅
@@ -179,7 +180,9 @@ function SignUp() {
   return (
     <div className="flex flex-col justify-center h-screen bg-bg00">
       <div className="w-[440px] bg-white shadow-lg rounded-lg overflow-hidden">
-        <div className="bg-headerBg px-6 py-4 text-white">로고</div>
+        <div className="bg-headerBg px-6 py-6 text-white">
+          <img src={logo} alt="로고" className="h-10" />
+        </div>
         <div className="p-8">
           <div className="flex flex-col gap-4">
             <p className="text-grey00 text-xl font-bold">회원가입</p>
