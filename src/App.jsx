@@ -7,7 +7,7 @@ import Modal from "./components/Modal";
 
 function App() {
   const location = useLocation();
-  const hidePaths = ["/", "/signup"];
+  const hidePaths = ["/", "/signup", "/signupcomplete"];
   const hide = hidePaths.includes(location.pathname);
   return (
     <>

@@ -5,6 +5,7 @@ function TextBox({
   placeholder,
   className,
   showLabel = true,
+  errorMessage = "",
   ...props
 }) {
   return (
@@ -15,6 +16,9 @@ function TextBox({
         placeholder={placeholder}
         {...props}
       />
+      {errorMessage && (
+        <p className="text-red-500 text-sm mt-1">{errorMessage}</p>
+      )}
     </div>
   );
 }
