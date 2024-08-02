@@ -230,7 +230,6 @@ function SignUp() {
               className="h-16"
               disabled={!isFormValid}
               onClick={signUpHandler}
-              isLoading={isLoading}
             />
             <MonotoneButton label="취소" className="h-10" onClick={goBack} />
             <div></div>

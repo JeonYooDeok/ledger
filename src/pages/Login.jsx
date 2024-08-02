@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import PrimaryButton from "../components/buttons/PrimaryButton";
 import TextBox from "../components/form/TextBox";
+import google from "../imgs/google.png";
+import naver from "../imgs/naver.png";
+import kakao from "../imgs/kakao.png";
 
 function Login() {
   // 로딩 상태 관리 훅
@@ -193,7 +196,6 @@ function Login() {
                 className="h-16"
                 disabled={!isFormValid}
                 onClick={logInHandler}
-                isLoading={isLoading}
               />
             </div>
 
@@ -212,10 +214,16 @@ function Login() {
                 <div className="grow shrink basis-0 h-[0px] border border-divider"></div>
               </div>
             </div>
-            <div>
-              <div>구글</div>
-              <div>카카오</div>
-              <div>네이버</div>
+            <div className="flex gap-4 justify-center">
+              <Link to="" className="inline-flex">
+                <img src={google} alt="구글로그인" className="w-12" />
+              </Link>
+              <Link to="" className="inline-flex">
+                <img src={naver} alt="구글로그인" className="w-12" />
+              </Link>
+              <Link to="" className="inline-flex">
+                <img src={kakao} alt="구글로그인" className="w-12" />
+              </Link>
             </div>
           </div>
         </div>
