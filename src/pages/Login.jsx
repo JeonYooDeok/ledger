@@ -191,6 +191,7 @@ function Login() {
               <PrimaryButton
                 label="로그인"
                 className="h-16"
+                disabled={!isFormValid}
                 onClick={logInHandler}
                 isLoading={isLoading}
               />
